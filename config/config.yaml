@@ -1,0 +1,17 @@
+# Data paths
+data:
+  raw:
+    disease_symptom: data/raw/disease-symptom/
+    symptom2disease: data/raw/symptom2disease/
+    medical_transcriptions: data/raw/medicaltranscriptions/
+  processed: data/processed/
+  knowledge_base: data/knowledge_base/
+
+# Model paths
+models:
+  embeddings: models/embeddings/
+  artifact: models/specialist_mapper.pkl
+
+# Metrics
+metrics:
+  output: metrics/scores.json

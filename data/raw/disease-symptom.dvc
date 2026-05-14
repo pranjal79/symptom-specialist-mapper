@@ -1,0 +1,6 @@
+outs:
+- md5: ae958cc814e62e280c41b15f94cb8fb8.dir
+  size: 649047
+  nfiles: 4
+  hash: md5
+  path: disease-symptom

@@ -1,0 +1,6 @@
+outs:
+- md5: 0205dcfd435707a31038724041c8475c.dir
+  size: 17007236
+  nfiles: 1
+  hash: md5
+  path: medicaltranscriptions

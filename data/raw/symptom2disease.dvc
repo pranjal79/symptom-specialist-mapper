@@ -1,0 +1,6 @@
+outs:
+- md5: 1697452555ef60326103a5ddf80b29b0.dir
+  size: 229852
+  nfiles: 1
+  hash: md5
+  path: symptom2disease

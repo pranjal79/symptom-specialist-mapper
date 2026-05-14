@@ -1,8 +1,14 @@
 # Virtual environment
 venv/
 
-# Data and models (tracked by DVC)
-data/
+# Ignore dataset contents (tracked by DVC)
+data/raw/**
+
+# Keep DVC tracking files
+!data/raw/*.dvc
+!data/.gitignore
+
+# Models
 models/
 
 # Python cache
