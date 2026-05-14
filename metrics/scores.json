@@ -2,7 +2,7 @@
   "top1_accuracy": 0.5357,
   "top3_accuracy": 0.8452,
   "mrr_score": 0.6726,
-  "avg_inference_ms": 23.08,
+  "avg_inference_ms": 24.65,
   "total_test_cases": 84,
   "top1_correct": 45,
   "top3_correct": 71

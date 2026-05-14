@@ -1,0 +1,70 @@
+stages:
+
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+      - src/data_ingestion.py
+      - config/config.yaml
+      - data/raw/disease-symptom
+      - data/raw/symptom2disease
+      - data/raw/medicaltranscriptions
+
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+      - src/data_preprocessing.py
+      - src/data_ingestion.py
+      - data/raw/disease-symptom
+      - data/raw/symptom2disease
+      - data/raw/medicaltranscriptions
+      - config/config.yaml
+    outs:
+      - data/processed/combined_dataset.csv
+      - data/knowledge_base/knowledge_base.csv
+      - data/knowledge_base/specialists.json
+
+  generate_embeddings:
+    cmd: python src/embeddings.py
+    deps:
+      - src/embeddings.py
+      - data/knowledge_base/knowledge_base.csv
+      - config/config.yaml
+    params:
+      - params.yaml:
+          - embedding_model
+          - batch_size
+    outs:
+      - models/embeddings/faiss_index.bin
+      - models/embeddings/embeddings.npy
+      - models/embeddings/kb_with_index.csv
+      - models/embeddings/metadata.json
+
+  register_model:
+    cmd: python src/model.py
+    deps:
+      - src/model.py
+      - models/embeddings/faiss_index.bin
+      - models/embeddings/kb_with_index.csv
+      - models/embeddings/metadata.json
+    outs:
+      - models/specialist_mapper.pkl
+
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+      - src/evaluate.py
+      - src/model.py
+      - models/embeddings/faiss_index.bin
+      - models/embeddings/kb_with_index.csv
+      - models/specialist_mapper.pkl
+    params:
+      - params.yaml:
+          - embedding_model
+          - similarity_metric
+          - top_k
+    metrics:
+      - metrics/scores.json:
+          cache: false
+    outs:
+      - metrics/detailed_results.csv:
+          cache: false

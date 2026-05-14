@@ -1,0 +1,168 @@
+schema: '2.0'
+stages:
+  data_ingestion:
+    cmd: python src/data_ingestion.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: e84eb816cec39b7ba4da95a67be21159
+      size: 410
+    - path: data/raw/disease-symptom
+      hash: md5
+      md5: ae958cc814e62e280c41b15f94cb8fb8.dir
+      size: 649047
+      nfiles: 4
+    - path: data/raw/medicaltranscriptions
+      hash: md5
+      md5: 0205dcfd435707a31038724041c8475c.dir
+      size: 17007236
+      nfiles: 1
+    - path: data/raw/symptom2disease
+      hash: md5
+      md5: 1697452555ef60326103a5ddf80b29b0.dir
+      size: 229852
+      nfiles: 1
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: e73f4170f0d8e4185e1a04afb219feb5
+      size: 3932
+  data_preprocessing:
+    cmd: python src/data_preprocessing.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: e84eb816cec39b7ba4da95a67be21159
+      size: 410
+    - path: data/raw/disease-symptom
+      hash: md5
+      md5: ae958cc814e62e280c41b15f94cb8fb8.dir
+      size: 649047
+      nfiles: 4
+    - path: data/raw/medicaltranscriptions
+      hash: md5
+      md5: 0205dcfd435707a31038724041c8475c.dir
+      size: 17007236
+      nfiles: 1
+    - path: data/raw/symptom2disease
+      hash: md5
+      md5: 1697452555ef60326103a5ddf80b29b0.dir
+      size: 229852
+      nfiles: 1
+    - path: src/data_ingestion.py
+      hash: md5
+      md5: e73f4170f0d8e4185e1a04afb219feb5
+      size: 3932
+    - path: src/data_preprocessing.py
+      hash: md5
+      md5: 294a62f75db87e8322ba75cf5c0c4f9c
+      size: 12773
+    outs:
+    - path: data/knowledge_base/knowledge_base.csv
+      hash: md5
+      md5: 7849719b379a52fcbde0518e9ded51dd
+      size: 7676915
+    - path: data/knowledge_base/specialists.json
+      hash: md5
+      md5: 18627913e9b27c7807cd2646c01391c5
+      size: 302
+    - path: data/processed/combined_dataset.csv
+      hash: md5
+      md5: 7849719b379a52fcbde0518e9ded51dd
+      size: 7676915
+  generate_embeddings:
+    cmd: python src/embeddings.py
+    deps:
+    - path: config/config.yaml
+      hash: md5
+      md5: e84eb816cec39b7ba4da95a67be21159
+      size: 410
+    - path: data/knowledge_base/knowledge_base.csv
+      hash: md5
+      md5: 7849719b379a52fcbde0518e9ded51dd
+      size: 7676915
+    - path: src/embeddings.py
+      hash: md5
+      md5: 0ba115dca0c336ab8a4ca6427283e1de
+      size: 4944
+    params:
+      params.yaml:
+        batch_size: 64
+        embedding_model: sentence-transformers/all-MiniLM-L6-v2
+    outs:
+    - path: models/embeddings/embeddings.npy
+      hash: md5
+      md5: 2ff9ba34f02ac81610db7f44936646e8
+      size: 5884544
+    - path: models/embeddings/faiss_index.bin
+      hash: md5
+      md5: c7a9ec4686aa450b1987be5bde3c14f4
+      size: 5884461
+    - path: models/embeddings/kb_with_index.csv
+      hash: md5
+      md5: c6a84ef300eb053eb38ce6433c604727
+      size: 15309149
+    - path: models/embeddings/metadata.json
+      hash: md5
+      md5: 9efa00b1598e7015ad7160cf372e57b3
+      size: 900
+  register_model:
+    cmd: python src/model.py
+    deps:
+    - path: models/embeddings/faiss_index.bin
+      hash: md5
+      md5: c7a9ec4686aa450b1987be5bde3c14f4
+      size: 5884461
+    - path: models/embeddings/kb_with_index.csv
+      hash: md5
+      md5: c6a84ef300eb053eb38ce6433c604727
+      size: 15309149
+    - path: models/embeddings/metadata.json
+      hash: md5
+      md5: 9efa00b1598e7015ad7160cf372e57b3
+      size: 900
+    - path: src/model.py
+      hash: md5
+      md5: 79b9db8b87adbfc01289e456f7acc709
+      size: 10648
+    outs:
+    - path: models/specialist_mapper.pkl
+      hash: md5
+      md5: c94eb6dfd3f76d012dc7ef038c9c768d
+      size: 370
+  evaluate:
+    cmd: python src/evaluate.py
+    deps:
+    - path: models/embeddings/faiss_index.bin
+      hash: md5
+      md5: c7a9ec4686aa450b1987be5bde3c14f4
+      size: 5884461
+    - path: models/embeddings/kb_with_index.csv
+      hash: md5
+      md5: c6a84ef300eb053eb38ce6433c604727
+      size: 15309149
+    - path: models/specialist_mapper.pkl
+      hash: md5
+      md5: c94eb6dfd3f76d012dc7ef038c9c768d
+      size: 370
+    - path: src/evaluate.py
+      hash: md5
+      md5: 55f6a93204b140a858bd75c64a891319
+      size: 14295
+    - path: src/model.py
+      hash: md5
+      md5: 79b9db8b87adbfc01289e456f7acc709
+      size: 10648
+    params:
+      params.yaml:
+        embedding_model: sentence-transformers/all-MiniLM-L6-v2
+        similarity_metric: cosine
+        top_k: 3
+    outs:
+    - path: metrics/detailed_results.csv
+      hash: md5
+      md5: 4f4ff7faff2a7d27beb4e4599767cd06
+      size: 13119
+    - path: metrics/scores.json
+      hash: md5
+      md5: a63d4e14fb4d1b3b789d9b8c108ad038
+      size: 186

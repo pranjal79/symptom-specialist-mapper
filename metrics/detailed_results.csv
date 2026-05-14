@@ -1,85 +1,85 @@
 symptom,ground_truth,top1_pred,top3_preds,correct_top1,correct_top3,inference_ms
-I have severe headaches that pound on one side of my head with nausea,Neurologist,Neurologist,"['Neurologist', 'Cardiologist', 'General Physician']",True,True,611.4
-I keep having seizures and losing consciousness suddenly,Neurologist,General Physician,"['General Physician', 'Neurologist', 'Pediatrician']",False,True,15.3
-My hands shake uncontrollably and I have trouble walking,Neurologist,Orthopedist,"['Orthopedist', 'General Physician', 'Endocrinologist']",False,False,19.5
-I have memory loss and confusion that is getting worse each day,Neurologist,General Physician,"['General Physician', 'Endocrinologist', 'Neurologist']",False,True,16.2
-I feel numbness and tingling in my arms and legs frequently,Neurologist,Endocrinologist,"['Endocrinologist', 'Neurologist', 'Orthopedist']",False,True,15.9
+I have severe headaches that pound on one side of my head with nausea,Neurologist,Neurologist,"['Neurologist', 'Cardiologist', 'General Physician']",True,True,612.8
+I keep having seizures and losing consciousness suddenly,Neurologist,General Physician,"['General Physician', 'Neurologist', 'Pediatrician']",False,True,17.9
+My hands shake uncontrollably and I have trouble walking,Neurologist,Orthopedist,"['Orthopedist', 'General Physician', 'Endocrinologist']",False,False,17.8
+I have memory loss and confusion that is getting worse each day,Neurologist,General Physician,"['General Physician', 'Endocrinologist', 'Neurologist']",False,True,18.0
+I feel numbness and tingling in my arms and legs frequently,Neurologist,Endocrinologist,"['Endocrinologist', 'Neurologist', 'Orthopedist']",False,True,17.7
 I had sudden weakness on one side of my body and slurred speech,Neurologist,Neurologist,"['Neurologist', 'General Physician', 'Endocrinologist']",True,True,17.0
-I have been getting severe migraines with visual aura for months,Neurologist,Neurologist,"['Neurologist', 'General Physician']",True,True,15.7
-My vision suddenly went blurry and I had a terrible headache,Neurologist,Neurologist,"['Neurologist', 'Endocrinologist', 'Cardiologist']",True,True,15.0
-I have chest pain and my heart feels like it is racing,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'Gastroenterologist']",True,True,15.9
-My blood pressure is very high and I feel dizzy often,Cardiologist,Cardiologist,['Cardiologist'],True,True,16.6
-I feel shortness of breath and chest tightness when I climb stairs,Cardiologist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Cardiologist']",False,True,15.0
-My heart skips beats and I feel palpitations throughout the day,Cardiologist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Cardiologist']",False,True,15.9
-I have swelling in my legs and feel breathless lying down at night,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'ENT Specialist']",True,True,16.0
-I had crushing chest pain that spread to my left arm,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'Orthopedist']",True,True,16.7
-I feel fatigue and dizziness along with irregular heartbeat,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'Endocrinologist']",True,True,17.0
-My skin has red itchy patches that are dry and flaking,Dermatologist,ENT Specialist,"['ENT Specialist', 'Dermatologist', 'General Physician']",False,True,17.7
-I have a rash all over my body that is very itchy and spreading,Dermatologist,General Physician,"['General Physician', 'Dermatologist']",False,True,19.0
-I have severe acne on my face and back that won't go away,Dermatologist,Dermatologist,['Dermatologist'],True,True,17.4
-My skin has white patches that are spreading on my arms,Dermatologist,Dermatologist,['Dermatologist'],True,True,16.8
-I notice a dark mole on my skin that has changed in shape,Dermatologist,Dermatologist,"['Dermatologist', 'General Physician']",True,True,16.9
-I have eczema and my skin is cracked and bleeding in winter,Dermatologist,Pediatrician,"['Pediatrician', 'General Physician', 'Dermatologist']",False,True,16.1
-There are ring shaped red patches on my skin that itch,Dermatologist,Dermatologist,"['Dermatologist', 'General Physician']",True,True,16.5
-"I have severe stomach pain, bloating and diarrhea after eating",Gastroenterologist,Urologist,"['Urologist', 'Gastroenterologist', 'General Physician']",False,True,15.0
-I feel nausea and vomiting frequently with loss of appetite,Gastroenterologist,General Physician,"['General Physician', 'Gastroenterologist', 'ENT Specialist']",False,True,16.2
-My stool has blood in it and I have severe abdominal cramps,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'General Physician', 'Urologist']",True,True,15.3
-I have acid reflux and heartburn that burns my chest after meals,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'Neurologist']",True,True,16.1
-My skin and eyes have turned yellow and I feel very weak,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'Endocrinologist', 'ENT Specialist']",True,True,16.4
-I have chronic constipation and bloating with abdominal discomfort,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'General Physician', 'Urologist']",True,True,16.3
-I feel pain in the upper right abdomen and my urine is dark,Gastroenterologist,Urologist,"['Urologist', 'General Physician', 'Gastroenterologist']",False,True,15.9
-I have a persistent cough for weeks with yellow mucus,Pulmonologist,General Physician,"['General Physician', 'Pulmonologist']",False,True,16.8
-I wheeze when I breathe and feel tightness in my chest,Pulmonologist,Cardiologist,"['Cardiologist', 'Pulmonologist', 'General Physician']",False,True,15.2
-I cough up blood and have lost significant weight recently,Pulmonologist,Endocrinologist,"['Endocrinologist', 'Gastroenterologist', 'Pulmonologist']",False,True,14.0
-I snore loudly and feel very tired even after sleeping all night,Pulmonologist,General Physician,"['General Physician', 'ENT Specialist', 'Gastroenterologist']",False,False,15.3
-I have difficulty breathing and my lips turn bluish sometimes,Pulmonologist,Endocrinologist,"['Endocrinologist', 'General Physician', 'ENT Specialist']",False,False,16.9
-I have chronic shortness of breath that gets worse with exercise,Pulmonologist,Endocrinologist,"['Endocrinologist', 'Pulmonologist', 'General Physician']",False,True,16.1
-My knee joint is very painful and swollen and hard to bend,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician', 'Dermatologist']",True,True,15.0
-I have severe lower back pain that shoots down my leg,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician', 'Urologist']",True,True,14.8
-My bones are weak and I fractured my wrist from a minor fall,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician']",True,True,16.0
-I have pain and stiffness in my joints every morning,Orthopedist,Orthopedist,['Orthopedist'],True,True,16.0
-My shoulder hurts when I lift my arm and I cannot rotate it,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician']",True,True,15.0
-I have neck pain and stiffness that spreads to my shoulders,Orthopedist,Orthopedist,"['Orthopedist', 'Neurologist']",True,True,15.0
-I feel very thirsty all the time and urinate frequently,Endocrinologist,Endocrinologist,"['Endocrinologist', 'Urologist']",True,True,16.0
-I have gained a lot of weight and feel very tired and cold,Endocrinologist,General Physician,"['General Physician', 'Endocrinologist', 'Dermatologist']",False,True,15.6
-My heart races and I sweat a lot despite not doing exercise,Endocrinologist,Cardiologist,"['Cardiologist', 'Endocrinologist', 'Pulmonologist']",False,True,15.0
-I have high blood sugar and my wounds take very long to heal,Endocrinologist,Endocrinologist,"['Endocrinologist', 'Orthopedist', 'General Physician']",True,True,16.0
-I feel shaky and confused when I have not eaten for a while,Endocrinologist,Gastroenterologist,"['Gastroenterologist', 'Neurologist', 'Endocrinologist']",False,True,16.0
-I have irregular periods and excessive hair growth on my face,Endocrinologist,ENT Specialist,"['ENT Specialist', 'Dermatologist', 'General Physician']",False,False,16.2
-I feel hopeless and sad every day and have lost interest in life,Psychiatrist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Neurologist']",False,False,16.0
-I have panic attacks with racing heart and difficulty breathing,Psychiatrist,Cardiologist,"['Cardiologist', 'General Physician', 'Pulmonologist']",False,False,16.0
-I hear voices that nobody else can hear and feel paranoid,Psychiatrist,Gastroenterologist,"['Gastroenterologist', 'Psychiatrist', 'Orthopedist']",False,True,16.4
-I cannot sleep and have flashbacks of a traumatic experience,Psychiatrist,General Physician,"['General Physician', 'Psychiatrist', 'ENT Specialist']",False,True,16.0
-I feel extreme mood swings from very happy to very sad,Psychiatrist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Neurologist']",False,False,16.0
-I have obsessive thoughts and perform rituals repeatedly,Psychiatrist,General Physician,"['General Physician', 'Endocrinologist', 'Urologist']",False,False,15.0
-I feel a burning pain when I urinate and need to go very often,Urologist,Urologist,['Urologist'],True,True,15.7
-I have severe pain in my lower back that comes in waves,Urologist,Orthopedist,"['Orthopedist', 'General Physician', 'Neurologist']",False,False,15.9
-I see blood in my urine and have lower abdominal pressure,Urologist,Urologist,"['Urologist', 'Endocrinologist', 'Cardiologist']",True,True,16.0
-I have difficulty starting urination and weak urine stream,Urologist,Urologist,"['Urologist', 'Endocrinologist']",True,True,15.8
+I have been getting severe migraines with visual aura for months,Neurologist,Neurologist,"['Neurologist', 'General Physician']",True,True,15.8
+My vision suddenly went blurry and I had a terrible headache,Neurologist,Neurologist,"['Neurologist', 'Endocrinologist', 'Cardiologist']",True,True,18.0
+I have chest pain and my heart feels like it is racing,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'Gastroenterologist']",True,True,17.7
+My blood pressure is very high and I feel dizzy often,Cardiologist,Cardiologist,['Cardiologist'],True,True,17.0
+I feel shortness of breath and chest tightness when I climb stairs,Cardiologist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Cardiologist']",False,True,17.8
+My heart skips beats and I feel palpitations throughout the day,Cardiologist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Cardiologist']",False,True,17.0
+I have swelling in my legs and feel breathless lying down at night,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'ENT Specialist']",True,True,16.7
+I had crushing chest pain that spread to my left arm,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'Orthopedist']",True,True,20.9
+I feel fatigue and dizziness along with irregular heartbeat,Cardiologist,Cardiologist,"['Cardiologist', 'General Physician', 'Endocrinologist']",True,True,17.3
+My skin has red itchy patches that are dry and flaking,Dermatologist,ENT Specialist,"['ENT Specialist', 'Dermatologist', 'General Physician']",False,True,17.4
+I have a rash all over my body that is very itchy and spreading,Dermatologist,General Physician,"['General Physician', 'Dermatologist']",False,True,17.9
+I have severe acne on my face and back that won't go away,Dermatologist,Dermatologist,['Dermatologist'],True,True,16.7
+My skin has white patches that are spreading on my arms,Dermatologist,Dermatologist,['Dermatologist'],True,True,17.6
+I notice a dark mole on my skin that has changed in shape,Dermatologist,Dermatologist,"['Dermatologist', 'General Physician']",True,True,18.4
+I have eczema and my skin is cracked and bleeding in winter,Dermatologist,Pediatrician,"['Pediatrician', 'General Physician', 'Dermatologist']",False,True,17.2
+There are ring shaped red patches on my skin that itch,Dermatologist,Dermatologist,"['Dermatologist', 'General Physician']",True,True,20.1
+"I have severe stomach pain, bloating and diarrhea after eating",Gastroenterologist,Urologist,"['Urologist', 'Gastroenterologist', 'General Physician']",False,True,18.1
+I feel nausea and vomiting frequently with loss of appetite,Gastroenterologist,General Physician,"['General Physician', 'Gastroenterologist', 'ENT Specialist']",False,True,16.4
+My stool has blood in it and I have severe abdominal cramps,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'General Physician', 'Urologist']",True,True,17.3
+I have acid reflux and heartburn that burns my chest after meals,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'Neurologist']",True,True,17.1
+My skin and eyes have turned yellow and I feel very weak,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'Endocrinologist', 'ENT Specialist']",True,True,16.5
+I have chronic constipation and bloating with abdominal discomfort,Gastroenterologist,Gastroenterologist,"['Gastroenterologist', 'General Physician', 'Urologist']",True,True,17.5
+I feel pain in the upper right abdomen and my urine is dark,Gastroenterologist,Urologist,"['Urologist', 'General Physician', 'Gastroenterologist']",False,True,17.3
+I have a persistent cough for weeks with yellow mucus,Pulmonologist,General Physician,"['General Physician', 'Pulmonologist']",False,True,16.9
+I wheeze when I breathe and feel tightness in my chest,Pulmonologist,Cardiologist,"['Cardiologist', 'Pulmonologist', 'General Physician']",False,True,17.8
+I cough up blood and have lost significant weight recently,Pulmonologist,Endocrinologist,"['Endocrinologist', 'Gastroenterologist', 'Pulmonologist']",False,True,17.0
+I snore loudly and feel very tired even after sleeping all night,Pulmonologist,General Physician,"['General Physician', 'ENT Specialist', 'Gastroenterologist']",False,False,17.8
+I have difficulty breathing and my lips turn bluish sometimes,Pulmonologist,Endocrinologist,"['Endocrinologist', 'General Physician', 'ENT Specialist']",False,False,16.6
+I have chronic shortness of breath that gets worse with exercise,Pulmonologist,Endocrinologist,"['Endocrinologist', 'Pulmonologist', 'General Physician']",False,True,18.0
+My knee joint is very painful and swollen and hard to bend,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician', 'Dermatologist']",True,True,17.0
+I have severe lower back pain that shoots down my leg,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician', 'Urologist']",True,True,17.8
+My bones are weak and I fractured my wrist from a minor fall,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician']",True,True,17.0
+I have pain and stiffness in my joints every morning,Orthopedist,Orthopedist,['Orthopedist'],True,True,17.2
+My shoulder hurts when I lift my arm and I cannot rotate it,Orthopedist,Orthopedist,"['Orthopedist', 'General Physician']",True,True,17.7
+I have neck pain and stiffness that spreads to my shoulders,Orthopedist,Orthopedist,"['Orthopedist', 'Neurologist']",True,True,18.6
+I feel very thirsty all the time and urinate frequently,Endocrinologist,Endocrinologist,"['Endocrinologist', 'Urologist']",True,True,19.8
+I have gained a lot of weight and feel very tired and cold,Endocrinologist,General Physician,"['General Physician', 'Endocrinologist', 'Dermatologist']",False,True,18.7
+My heart races and I sweat a lot despite not doing exercise,Endocrinologist,Cardiologist,"['Cardiologist', 'Endocrinologist', 'Pulmonologist']",False,True,17.6
+I have high blood sugar and my wounds take very long to heal,Endocrinologist,Endocrinologist,"['Endocrinologist', 'Orthopedist', 'General Physician']",True,True,20.5
+I feel shaky and confused when I have not eaten for a while,Endocrinologist,Gastroenterologist,"['Gastroenterologist', 'Neurologist', 'Endocrinologist']",False,True,17.1
+I have irregular periods and excessive hair growth on my face,Endocrinologist,ENT Specialist,"['ENT Specialist', 'Dermatologist', 'General Physician']",False,False,17.6
+I feel hopeless and sad every day and have lost interest in life,Psychiatrist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Neurologist']",False,False,15.6
+I have panic attacks with racing heart and difficulty breathing,Psychiatrist,Cardiologist,"['Cardiologist', 'General Physician', 'Pulmonologist']",False,False,16.9
+I hear voices that nobody else can hear and feel paranoid,Psychiatrist,Gastroenterologist,"['Gastroenterologist', 'Psychiatrist', 'Orthopedist']",False,True,18.6
+I cannot sleep and have flashbacks of a traumatic experience,Psychiatrist,General Physician,"['General Physician', 'Psychiatrist', 'ENT Specialist']",False,True,18.2
+I feel extreme mood swings from very happy to very sad,Psychiatrist,Endocrinologist,"['Endocrinologist', 'General Physician', 'Neurologist']",False,False,17.2
+I have obsessive thoughts and perform rituals repeatedly,Psychiatrist,General Physician,"['General Physician', 'Endocrinologist', 'Urologist']",False,False,15.9
+I feel a burning pain when I urinate and need to go very often,Urologist,Urologist,['Urologist'],True,True,17.1
+I have severe pain in my lower back that comes in waves,Urologist,Orthopedist,"['Orthopedist', 'General Physician', 'Neurologist']",False,False,17.6
+I see blood in my urine and have lower abdominal pressure,Urologist,Urologist,"['Urologist', 'Endocrinologist', 'Cardiologist']",True,True,16.5
+I have difficulty starting urination and weak urine stream,Urologist,Urologist,"['Urologist', 'Endocrinologist']",True,True,17.4
 I have kidney pain and frequent urinary tract infections,Urologist,Urologist,['Urologist'],True,True,15.8
-My vision has become blurry and I see halos around lights,Ophthalmologist,Endocrinologist,"['Endocrinologist', 'Neurologist', 'Ophthalmologist']",False,True,16.0
-I have eye pain and redness with sensitivity to light,Ophthalmologist,Neurologist,"['Neurologist', 'Ophthalmologist', 'Endocrinologist']",False,True,15.6
-I see floaters and flashes of light in my vision suddenly,Ophthalmologist,Endocrinologist,"['Endocrinologist', 'Neurologist', 'ENT Specialist']",False,False,15.9
-My eyes water constantly and are very itchy and red,Ophthalmologist,ENT Specialist,"['ENT Specialist', 'Ophthalmologist', 'General Physician']",False,True,16.0
-I have double vision and difficulty focusing on objects,Ophthalmologist,Neurologist,"['Neurologist', 'Ophthalmologist', 'Endocrinologist']",False,True,15.9
-"I have a blocked nose, headache, and facial pain for weeks",ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Neurologist']",True,True,16.9
-My throat is very sore and I have swollen painful tonsils,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Gastroenterologist']",True,True,16.1
-I have been losing my hearing gradually in one ear,ENT Specialist,Pediatrician,"['Pediatrician', 'ENT Specialist', 'General Physician']",False,True,16.7
-I hear a constant ringing sound in my ears all day,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Pediatrician']",True,True,15.6
-I have frequent nosebleeds and nasal congestion,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Pulmonologist']",True,True,15.0
-I sneeze constantly and have watery eyes and runny nose,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Endocrinologist']",True,True,15.9
-I have a painless lump in my breast that has been growing,Oncologist,Oncologist,"['Oncologist', 'Gynecologist', 'General Physician']",True,True,15.9
-I have unexplained weight loss and night sweats for months,Oncologist,Dermatologist,"['Dermatologist', 'Cardiologist', 'General Physician']",False,False,15.6
-I feel extremely fatigued and have swollen lymph nodes in my neck,Oncologist,Orthopedist,"['Orthopedist', 'General Physician', 'Neurologist']",False,False,16.1
-I have a lump in my neck that has been there for two months,Oncologist,Oncologist,"['Oncologist', 'General Physician', 'Neurologist']",True,True,16.0
-I have irregular and very painful periods with heavy bleeding,Gynecologist,Gynecologist,"['Gynecologist', 'General Physician']",True,True,16.0
-I have pelvic pain and bloating throughout the month,Gynecologist,Gynecologist,"['Gynecologist', 'General Physician', 'Urologist']",True,True,16.6
-I have vaginal discharge that is unusual and has a bad odor,Gynecologist,Gynecologist,"['Gynecologist', 'Urologist', 'General Physician']",True,True,14.9
-"My child has high fever, rash and is crying constantly",Pediatrician,Pediatrician,"['Pediatrician', 'General Physician', 'Gastroenterologist']",True,True,16.8
-My baby is not gaining weight and refuses to feed properly,Pediatrician,Pediatrician,"['Pediatrician', 'Neurologist', 'General Physician']",True,True,15.0
-My child has developmental delays and is not speaking yet,Pediatrician,Neurologist,"['Neurologist', 'ENT Specialist', 'Pediatrician']",False,True,14.8
-"I have a fever, body aches, and runny nose since yesterday",General Physician,General Physician,"['General Physician', 'Pulmonologist', 'ENT Specialist']",True,True,15.6
-I feel very weak and tired with mild fever and headache,General Physician,General Physician,['General Physician'],True,True,16.3
-"I have a sore throat, cough and mild fever since three days",General Physician,General Physician,"['General Physician', 'Pulmonologist', 'ENT Specialist']",True,True,15.8
-"I have chills, sweating and high fever that comes and goes",General Physician,General Physician,['General Physician'],True,True,16.0
-I feel generally unwell with body pain and loss of appetite,General Physician,Neurologist,"['Neurologist', 'Cardiologist', 'ENT Specialist']",False,False,15.8
+My vision has become blurry and I see halos around lights,Ophthalmologist,Endocrinologist,"['Endocrinologist', 'Neurologist', 'Ophthalmologist']",False,True,17.1
+I have eye pain and redness with sensitivity to light,Ophthalmologist,Neurologist,"['Neurologist', 'Ophthalmologist', 'Endocrinologist']",False,True,17.5
+I see floaters and flashes of light in my vision suddenly,Ophthalmologist,Endocrinologist,"['Endocrinologist', 'Neurologist', 'ENT Specialist']",False,False,16.7
+My eyes water constantly and are very itchy and red,Ophthalmologist,ENT Specialist,"['ENT Specialist', 'Ophthalmologist', 'General Physician']",False,True,19.3
+I have double vision and difficulty focusing on objects,Ophthalmologist,Neurologist,"['Neurologist', 'Ophthalmologist', 'Endocrinologist']",False,True,17.1
+"I have a blocked nose, headache, and facial pain for weeks",ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Neurologist']",True,True,19.8
+My throat is very sore and I have swollen painful tonsils,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Gastroenterologist']",True,True,20.5
+I have been losing my hearing gradually in one ear,ENT Specialist,Pediatrician,"['Pediatrician', 'ENT Specialist', 'General Physician']",False,True,16.4
+I hear a constant ringing sound in my ears all day,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Pediatrician']",True,True,16.9
+I have frequent nosebleeds and nasal congestion,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Pulmonologist']",True,True,17.8
+I sneeze constantly and have watery eyes and runny nose,ENT Specialist,ENT Specialist,"['ENT Specialist', 'General Physician', 'Endocrinologist']",True,True,17.0
+I have a painless lump in my breast that has been growing,Oncologist,Oncologist,"['Oncologist', 'Gynecologist', 'General Physician']",True,True,17.7
+I have unexplained weight loss and night sweats for months,Oncologist,Dermatologist,"['Dermatologist', 'Cardiologist', 'General Physician']",False,False,17.9
+I feel extremely fatigued and have swollen lymph nodes in my neck,Oncologist,Orthopedist,"['Orthopedist', 'General Physician', 'Neurologist']",False,False,17.8
+I have a lump in my neck that has been there for two months,Oncologist,Oncologist,"['Oncologist', 'General Physician', 'Neurologist']",True,True,18.2
+I have irregular and very painful periods with heavy bleeding,Gynecologist,Gynecologist,"['Gynecologist', 'General Physician']",True,True,17.5
+I have pelvic pain and bloating throughout the month,Gynecologist,Gynecologist,"['Gynecologist', 'General Physician', 'Urologist']",True,True,17.3
+I have vaginal discharge that is unusual and has a bad odor,Gynecologist,Gynecologist,"['Gynecologist', 'Urologist', 'General Physician']",True,True,16.6
+"My child has high fever, rash and is crying constantly",Pediatrician,Pediatrician,"['Pediatrician', 'General Physician', 'Gastroenterologist']",True,True,18.6
+My baby is not gaining weight and refuses to feed properly,Pediatrician,Pediatrician,"['Pediatrician', 'Neurologist', 'General Physician']",True,True,17.5
+My child has developmental delays and is not speaking yet,Pediatrician,Neurologist,"['Neurologist', 'ENT Specialist', 'Pediatrician']",False,True,17.3
+"I have a fever, body aches, and runny nose since yesterday",General Physician,General Physician,"['General Physician', 'Pulmonologist', 'ENT Specialist']",True,True,17.1
+I feel very weak and tired with mild fever and headache,General Physician,General Physician,['General Physician'],True,True,17.5
+"I have a sore throat, cough and mild fever since three days",General Physician,General Physician,"['General Physician', 'Pulmonologist', 'ENT Specialist']",True,True,17.0
+"I have chills, sweating and high fever that comes and goes",General Physician,General Physician,['General Physician'],True,True,15.9
+I feel generally unwell with body pain and loss of appetite,General Physician,Neurologist,"['Neurologist', 'Cardiologist', 'ENT Specialist']",False,False,18.1
