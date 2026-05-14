@@ -1,0 +1,6 @@
+outs:
+- md5: 4f9c1647780815b697c13810d47a2db9.dir
+  size: 27079054
+  nfiles: 4
+  hash: md5
+  path: embeddings

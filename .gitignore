@@ -1,29 +1,54 @@
 # Virtual environment
 venv/
 
-# Ignore dataset contents (tracked by DVC)
+# =========================================================
+# DATA (tracked by DVC)
+# =========================================================
+
+# Ignore actual data contents
 data/raw/**
+data/processed/**
+data/knowledge_base/**
 
 # Keep DVC tracking files
 !data/raw/*.dvc
+!data/*.dvc
 !data/.gitignore
 
-# Models
-models/
+# =========================================================
+# MODELS / EMBEDDINGS (tracked by DVC)
+# =========================================================
 
-# Python cache
+# Ignore actual model files
+models/embeddings/**
+
+# Keep DVC tracking files
+!models/*.dvc
+!models/.gitignore
+
+# =========================================================
+# PYTHON CACHE
+# =========================================================
 __pycache__/
 *.pyc
 *.pyo
 
-# Environment variables
+# =========================================================
+# ENVIRONMENT VARIABLES
+# =========================================================
 .env
 
-# Jupyter checkpoints
+# =========================================================
+# JUPYTER
+# =========================================================
 .ipynb_checkpoints/
 
-# MLflow
+# =========================================================
+# MLFLOW
+# =========================================================
 mlruns/
 
-# DVC cache
+# =========================================================
+# DVC CACHE
+# =========================================================
 .dvc/cache/
