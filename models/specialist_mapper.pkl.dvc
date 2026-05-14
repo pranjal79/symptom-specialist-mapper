@@ -1,0 +1,5 @@
+outs:
+- md5: c94eb6dfd3f76d012dc7ef038c9c768d
+  size: 370
+  hash: md5
+  path: specialist_mapper.pkl
