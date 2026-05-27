@@ -1,4 +1,6 @@
-# Virtual environment
+# =========================================================
+# VIRTUAL ENVIRONMENT
+# =========================================================
 venv/
 
 # =========================================================
@@ -25,6 +27,15 @@ models/embeddings/**
 # Keep DVC tracking files
 !models/*.dvc
 !models/.gitignore
+
+# =========================================================
+# KEEP MODEL ARTIFACTS FOR DEPLOYMENT
+# =========================================================
+
+!models/embeddings/faiss_index.bin
+!models/embeddings/metadata.json
+!models/embeddings/kb_with_index.csv
+!models/specialist_mapper.pkl
 
 # =========================================================
 # PYTHON CACHE

@@ -1,0 +1,27 @@
+name: symptom-specialist-mapper
+
+conda_env: conda.yaml
+
+entry_points:
+
+  preprocess:
+    command: "python src/data_preprocessing.py"
+
+  embed:
+    parameters:
+      embedding_model:
+        type: string
+        default: "sentence-transformers/all-MiniLM-L6-v2"
+
+    command: "python src/embeddings.py"
+
+  evaluate:
+    command: "python src/evaluate.py"
+
+  predict:
+    parameters:
+      symptoms:
+        type: string
+        default: "I have a headache and fever"
+
+    command: "python src/predict.py {symptoms}"
