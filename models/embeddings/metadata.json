@@ -1,0 +1,39 @@
+{
+  "model_name": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "total_vectors": 3831,
+  "specialists": [
+    "Cardiologist",
+    "Dermatologist",
+    "ENT Specialist",
+    "Endocrinologist",
+    "Gastroenterologist",
+    "General Physician",
+    "Gynecologist",
+    "Neurologist",
+    "Oncologist",
+    "Ophthalmologist",
+    "Orthopedist",
+    "Pediatrician",
+    "Psychiatrist",
+    "Pulmonologist",
+    "Urologist"
+  ],
+  "specialist_counts": {
+    "General Physician": 2367,
+    "Gastroenterologist": 248,
+    "Urologist": 233,
+    "Neurologist": 192,
+    "Dermatologist": 167,
+    "Orthopedist": 134,
+    "Cardiologist": 87,
+    "Endocrinologist": 86,
+    "ENT Specialist": 72,
+    "Pulmonologist": 65,
+    "Pediatrician": 52,
+    "Psychiatrist": 51,
+    "Oncologist": 36,
+    "Gynecologist": 26,
+    "Ophthalmologist": 15
+  }
+}

@@ -7,8 +7,10 @@ venv/
 # DATA (tracked by DVC)
 # =========================================================
 
-# Ignore actual data contents
+# Ignore raw data
 data/raw/**
+
+# Ignore processed + KB by default
 data/processed/**
 data/knowledge_base/**
 
@@ -18,10 +20,22 @@ data/knowledge_base/**
 !data/.gitignore
 
 # =========================================================
+# KEEP DEPLOYMENT DATA FILES
+# =========================================================
+
+# Keep processed datasets for deployment
+!data/processed/
+!data/processed/**
+
+# Keep knowledge base for deployment
+!data/knowledge_base/
+!data/knowledge_base/**
+
+# =========================================================
 # MODELS / EMBEDDINGS (tracked by DVC)
 # =========================================================
 
-# Ignore actual model files
+# Ignore embeddings by default
 models/embeddings/**
 
 # Keep DVC tracking files
@@ -32,6 +46,7 @@ models/embeddings/**
 # KEEP MODEL ARTIFACTS FOR DEPLOYMENT
 # =========================================================
 
+# Required FAISS/model files
 !models/embeddings/faiss_index.bin
 !models/embeddings/metadata.json
 !models/embeddings/kb_with_index.csv
