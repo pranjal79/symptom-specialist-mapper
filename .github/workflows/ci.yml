@@ -10,6 +10,7 @@ env:
   PYTHON_VERSION: "3.10"
 
 jobs:
+
   # ── Job 1: Lint + Test ──────────────────────────────────────
   lint-and-test:
     name: Lint & Test
@@ -35,6 +36,7 @@ jobs:
         run: |
           # Stop build on syntax errors or undefined names
           flake8 src/ app/ --count --select=E9,F63,F7,F82 --show-source --statistics
+
           # Warnings only — don't fail on style issues
           flake8 src/ app/ --count --exit-zero --max-line-length=120 --statistics
 
@@ -90,46 +92,72 @@ jobs:
           python-version: ${{ env.PYTHON_VERSION }}
 
       - name: Install HuggingFace Hub CLI
-        run: pip install huggingface_hub
+        run: pip install "huggingface_hub[cli]"
 
-      - name: Deploy to HuggingFace Spaces
+      - name: Create Space and Deploy
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
           HF_USERNAME: ${{ secrets.HF_USERNAME }}
+
         run: |
           python - <<'EOF'
           import os
+          import time
           from huggingface_hub import HfApi
 
-          api      = HfApi()
-          token    = os.environ["HF_TOKEN"]
+          api = HfApi(token=os.environ["HF_TOKEN"])
+
           username = os.environ["HF_USERNAME"]
           repo_id  = f"{username}/symptom-specialist-mapper"
 
-          # Create space if it doesn't exist
+          # ── Step 1: Create HF Space ─────────────────────────
+          print(f"Creating space: {repo_id}")
+
           try:
               api.create_repo(
                   repo_id=repo_id,
                   repo_type="space",
-                  space_sdk="streamlit",
-                  token=token,
+                  space_sdk="docker",
+                  token=os.environ["HF_TOKEN"],
                   exist_ok=True,
+                  private=False,
               )
-              print(f"✅ Space ready: {repo_id}")
-          except Exception as e:
-              print(f"Space exists or error: {e}")
 
-          # Upload all project files
-          api.upload_folder(
-              folder_path=".",
-              repo_id=repo_id,
-              repo_type="space",
-              token=token,
-              ignore_patterns=[
-                  ".git*", "venv/", "__pycache__/",
-                  "*.pyc", ".dvc/cache/", "mlruns/",
-                  "data/raw/", ".env",
-              ],
-          )
-          print(f"✅ Deployed to https://huggingface.co/spaces/{repo_id}")
+              print(f"✅ Space created/exists: {repo_id}")
+
+              # Small delay so HF can initialize repo
+              time.sleep(3)
+
+          except Exception as e:
+              print(f"Create repo error: {e}")
+
+          # ── Step 2: Upload Files ────────────────────────────
+          print("Uploading files...")
+
+          try:
+              api.upload_folder(
+                  folder_path=".",
+                  repo_id=repo_id,
+                  repo_type="space",
+                  token=os.environ["HF_TOKEN"],
+
+                  ignore_patterns=[
+                      ".git*",
+                      "venv/",
+                      "__pycache__/",
+                      "*.pyc",
+                      ".dvc/cache/",
+                      "mlruns/",
+                      "data/raw/",
+                      ".env",
+                      "*.dvc",
+                  ],
+              )
+
+              print(f"✅ Deployed to https://huggingface.co/spaces/{repo_id}")
+
+          except Exception as e:
+              print(f"Upload error: {e}")
+              raise
+
           EOF
