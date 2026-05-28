@@ -1,6 +1,10 @@
 import sys
 import os
-sys.path.insert(0, os.path.abspath('.'))
+
+# Fix paths for HuggingFace Spaces — app runs from /app directory
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+sys.path.insert(0, BASE_DIR)
+os.chdir(BASE_DIR)
 
 import streamlit as st
 from src.model import SpecialistMapper
