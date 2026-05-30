@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: symptom-specialist-mapper
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run app/app.py --server.port=10000 --server.address=0.0.0.0 --server.headless=true --browser.gatherUsageStats=false
+    envVars:
+      - key: PYTHONPATH
+        value: .
+    autoDeploy: true

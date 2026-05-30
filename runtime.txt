@@ -1,0 +1,5 @@
+python -c "
+with open('runtime.txt', 'w') as f:
+    f.write('python-3.10.0')
+print('Done')
+"
